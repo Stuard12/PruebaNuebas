@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" inherit_id="point_of_sale.template" xml:space="preserve">
+
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery=".payment-buttons" t-operation="append">
+            <div t-attf-class='button js_boleta highlight'>
+                <i class='fa fa-file' /> Boleta
+            </div>
+            <div t-attf-class='button js_factura'>
+                <i class='fa fa-file-text-o' /> Factura
+            </div>
+        </t>
+    </t>
+    <!-- Example -->
+    <!--
+    <t t-extend="XmlReceipt">
+        <t t-jquery="receipt" t-operation="replace">
+            <receipt align="center" value-thousands-separator="" width="54">
+                <h3><t t-esc='receipt.company.name' /></h3>
+                <div font='b'>
+                    <t t-if='receipt.type_document === "b"'>
+                        <div bold='on'>Boleta</div>
+                    </t>
+                    <t t-if='receipt.type_document === "f"'>
+                        <div bold='on'>Factura</div>
+                    </t>
+                </div>
+            </receipt>
+        </t>
+    </t> -->
+
+</templates>
